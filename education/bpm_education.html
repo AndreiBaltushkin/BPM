@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BPM Education</title>
+</head>
+<body>
+    <header><h1>Notes for Badger Project Making</h1></header>
+    <main>
+        <header><h2>10/30/2022 learn AJAX</h2></header>
+        <p>
+            <abbr title="Asynchronous Javascript And XML">AJAX</abbr> helps accomplish making requests to load/send information. AJAX allows interacting with a website's server.
+        </p>
+        <p>
+            <abbr title="Application Programming Interface">API</abbr> exist to store data (plain data to cut out HTML, CSS, and Javascript junk) that servers might request (interaction between softwares). Web API are HTTP-based so that servers can use them for websites. Requests are made to API's URL.
+        </p>
+        <p>
+            XML used to be the standard format for API-s, but nowadays it is replaced by <abbr title="JavaScript Object Notation">JSON</abbr> format. 
+        </p>
+        <p>
+            This <a href="https://www.json.org/json-en.html">website</a> contains the documentation for JSON format. Generally, it was developed to suit well for Javascript.
+        </p>
+        <p>
+            This <a href="https://jsonformatter.curiousconcept.com/">website</a> helps with json syntax.
+        </p>
+        <p>
+            <a href="https://www.postman.com/">Postman</a> and <a href="https://hoppscotch.io/">Hopp Scotch</a> (free) allow testing requests by URL. 
+        </p>
+        <p>
+            Request <em>status codes</em> provide information about request (e.g. 200 = OK, 404 = Not Found)
+        </p>
+        <p>
+            Asked Adam on 11/29/2022 about JSON and pages.
+            <br>
+            For JSON consistency: create a JSON outline file ( <a href="https://json-schema.org/">json schema</a> ) and run it through JSON validator. THuis way, I have documentation and consistent format.
+            <br>
+            A project's information could be stored as JSON locally, or in Browser's storage. Browsers allow changing local files.
+            <br>
+            For Project page: a JSON stores all data about a project. According to a user's status, information is provded on a page or prohibited.
+        </p>
+        <header><h2>Simple HTTP c# server</h2></header>
+        <p>
+            RestSharp might be the solution to handle requests and responses.
+            <br>
+            I need to understand what a web server is and do I really need it:
+            <br>
+            <ul>
+                <li>Is a server required if I use RestSharp library?</li>
+                <li>A browser button initializes POST request. Does it provide user input only or information about user too (like his current link)?</li>
+                <li>I can get away with GET for opening a project. POST, however, is required to create and manage a project</li>
+            </ul>
+        </p>
+        <p>
+            12/18/2022. I am stuck on sending/receiving a proper server request.
+            <br>
+            Try solve by studying REST API
+            <br>
+            <ul>
+                <li><a href="https://stackoverflow.blog/2020/03/02/best-practices-for-rest-api-design/">Website about REST API</a></li>
+                <li>Also, see how Udemy can help</li>
+
+            </ul>
+        </p>
+    </main>
+</body>
+</html>

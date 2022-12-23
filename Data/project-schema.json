@@ -1,0 +1,53 @@
+{
+    "$schema": "http://json-schema.org/schema",
+    "$id": "WebDevNotes/badger-project-management/project-schema.json",
+    "title": "project",
+    "description": "A project metadata",
+    "type": "object",
+    "required": ["id", "name", "projectOwner"],
+    "properties": {
+        "id": {
+            "description": "unique identifier of the project",
+            "type": "integer"
+        },
+        "name": {
+            "description": "The name of the project",
+            "type": "string"
+        },
+        "proposal": {
+            "description": "A detailed explanation of the project idea aimed to promote interest in participation",
+            "type":"string"
+        },
+        "participants": {
+            "desctiption": "A list of project members that have access to the project link",
+            "type": "array",
+            "items": {
+                "description": "Names and emails of participants",
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "Name of the participant",
+                        "type": "string"
+                    },
+                    "email": {
+                        "description": "Email of the participant",
+                        "type": "string"
+                    }
+                }
+            },
+            "uniqueItems": true
+        },
+        "participantsMaxNumber": {
+            "description": "Number that specifies the maximum number of participants per project",
+            "type": "integer",
+            "exclusiveMinimum": 1
+        },
+        "projectURL": {
+            "description": "Link to the actual project",
+            "type": "string"
+        },
+        "projectOwner": {
+            
+        }
+    }
+}

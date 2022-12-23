@@ -1,0 +1,7 @@
+{
+    "projects":
+        [
+            {"id" : "0", "name" : "Project-Done 1", "people": ["bpm/people/{id}", "bpm/people/{id}"]},
+            {"id" : "1", "name" : "Project-Done 2", "people": ["bpm/people/{id}", "bpm/people/{id}"]}
+        ]
+}
