@@ -1,7 +1,3 @@
-// file creator taken here: https://stackoverflow.com/questions/14446447/how-to-read-a-local-text-file-in-the-browser#:~:text=Try%20creating%20two%20functions
-
-//another way of getting an API data without nesting then-s and catch-es is async():
-// const loadProjects = async() => {
 async function LoadProjects(projectsPath) {
     try {
         document.querySelector("#projects-list").innerHTML = "";
@@ -30,10 +26,14 @@ function PrepareButtons()
 function UploadMainPage()
 {
     document.querySelector("main.major-main").innerHTML = `<nav id="projects-nav" class="projects">
-    <button type="button" class="projects" id="btn-projects-current">Current</button>
-    <button type="button" class="projects" id="btn-projects-done">Done</button>
+    <button type="button" class="projects" id="btn-projects-current"><svg class="text-underline" height="20" width="50"><line x1="0" y1="14" x2="45" y2="14" style="stroke:rgb(255,0,0);stroke-width:2" /></svg><span>Current</span></button>
+    <button type="button" class="projects" id="btn-projects-done"><span>Done<span></button>
 </nav>
 <ul id="projects-list"></ul>`;
+    document.querySelector("svg.text-underline").addEventListener("hover", () => {
+        let line = document.querySelector("svg.text-underline line");
+        console.log(line);
+    });
     PrepareButtons();
 }
 async function LoadEmptyJSON()
@@ -41,13 +41,10 @@ async function LoadEmptyJSON()
     const projects = await fetch('https://localhost:7161/empty', {mode: 'no-cors'}).then(response => response.json());
     console.log(projects);
 }
-//localStorage.setItem("currentProjectsPath", "data/projects-current.json");
-//localStorage.setItem("doneProjectsPath", "data/projects-done.json");
 window.addEventListener("error", function(event) {
     console.log(event);
 });
 window.addEventListener("load", function() {
     UploadMainPage();
-    // LoadEmptyJSON();
-    this.document.querySelector("#btn-projects-current").click();
+    document.querySelector("#btn-projects-current").click();
 });
