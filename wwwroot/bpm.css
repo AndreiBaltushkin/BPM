@@ -17,7 +17,6 @@ body {
 }
 header.major-header {
     grid-area: H;
-    background-image: url("/badger-project-management/gallery/tree.jpg");
     background-color: rgb(255, 218, 125);
     text-align: center;
 }
@@ -43,15 +42,18 @@ main.major-main {
     margin-top: 20px;
     min-height: 500px;
 }
-#btn-projects-current:hover {
-    text-decoration: underline;
-}
-button {
-    position: relative;
-}
-svg.text-underline {
+button.projects svg.text-underline{
     position: absolute;
 }
+/* button.projects svg.text-underline line {
+    transition: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+button.projects:hover svg.text-underline line {
+    transform: scaleX(45);
+    transition: 0.5s;
+    transition-timing-function: ease-in-out;
+} */
 footer.major-footer{
     grid-area: F;
     max-height: 100px;
